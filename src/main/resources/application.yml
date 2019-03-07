@@ -1,7 +1,5 @@
 spring:
-  application:
-    name: config-server  cloud:    config:      server:        git:          uri: file:///C:/Users/ManivannanG/SpringBoot/git/git-local-repo
-
+  profiles:    active: dev
+  cloud:    config:      server:        git:          uri: https://github.com/spring-boot-cloud-microservices/config-repo
+          skip-ssl-validation: true
 eureka:  client:    register-with-eureka: true
-
-server:  port: 8602   
